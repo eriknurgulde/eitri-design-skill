@@ -1,0 +1,126 @@
+/* Eitri design tokens — generated from the Eitri Figma DS */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Roboto+Mono:wght@400;500&display=swap');
+/* Climate Crisis: https://fonts.google.com/specimen/Climate+Crisis */
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap');
+
+:root {
+  /* Neutrals */
+  --eitri-void: #080808;
+  --eitri-graphite-00: #181818;
+  --eitri-graphite-01: #202020;
+  --eitri-iron: #343434;
+  --eitri-steel: #666666;
+  --eitri-ash: #999999;
+  --eitri-silver: #d4d4d4;
+  --eitri-white: #f5f5f2;
+  --eitri-heat-tint: #fff8e8;
+
+  /* Heat palette */
+  --eitri-ember: #4a0804;
+  --eitri-deep-ember: #700d06;
+  --eitri-forge-red: #a51d0b;
+  --eitri-hot-red: #d63212;
+  --eitri-forge-orange: #f04a16;
+  --eitri-hot-orange: #ff741c;
+  --eitri-incandescent: #ff9d2e;
+  --eitri-white-hot: #ffd56a;
+  --eitri-core-glow: #fff1c2;
+
+  /* Brand gradient — always used whole */
+  --eitri-gradient: linear-gradient(90deg, #4a0804 0%, #700d06 12.5%, #a51d0b 25%, #d63212 37.5%, #f04a16 50%, #ff741c 62.5%, #ff9d2e 75%, #ffd56a 87.5%, #fff1c2 100%);
+
+  /* Semantic */
+  --color-bg: var(--eitri-void);
+  --color-surface: var(--eitri-graphite-00);
+  --color-surface-raised: var(--eitri-graphite-01);
+  --color-border: var(--eitri-iron);
+  --color-input: var(--eitri-iron);
+  --color-text: var(--eitri-white);
+  --color-text-body: var(--eitri-silver);
+  --color-text-muted: var(--eitri-ash);
+  --color-text-placeholder: var(--eitri-steel);
+  --color-primary: var(--eitri-forge-orange);
+  --color-primary-hover: var(--eitri-hot-orange);
+  --color-primary-pressed: var(--eitri-hot-red);
+  --color-emphasis-border: var(--eitri-forge-red);
+
+  /* Type families */
+  --font-display: 'Climate Crisis', 'Manrope', sans-serif;
+  --font-ui: 'Manrope', system-ui, sans-serif;
+  --font-mono: 'Roboto Mono', ui-monospace, monospace;
+
+  /* Radius & motion */
+  --radius: 0px;
+  --radius-round: 9999px;
+  --ease: cubic-bezier(0, 0, 0.2, 1);
+  --duration-hover: 300ms;
+  --duration-fast: 200ms;
+
+  /* Mobile-first type & spacing (390) */
+  --page-pad: 20px;
+  --section-gap: 56px;
+  --fs-hero: 38px;  --lh-hero: 36px;
+  --fs-display-l: 44px; --lh-display-l: 52px;
+  --fs-display-m: 32px; --lh-display-m: 36px;
+  --fs-h2: 24px; --lh-h2: 28px;
+  --fs-title: 17px; --lh-title: 22px;
+  --fs-lead: 15px; --lh-lead: 22px;
+  --fs-body: 14px; --lh-body: 21px;
+  --fs-label: 14px;
+  --fs-mono: 12px;
+  --fs-button: 15px;
+  --tap: 44px;
+}
+
+@media (min-width: 768px) { /* Tablet */
+  :root {
+    --page-pad: 32px; --section-gap: 88px;
+    --fs-hero: 72px; --lh-hero: 68px;
+    --fs-display-l: 84px; --lh-display-l: 100px;
+    --fs-display-m: 64px; --lh-display-m: 72px;
+    --fs-h2: 36px; --lh-h2: 42px;
+    --fs-title: 22px; --lh-title: 28px;
+    --fs-lead: 17px; --lh-lead: 26px;
+    --fs-body: 16px; --lh-body: 24px;
+    --fs-label: 15px; --fs-mono: 13px; --fs-button: 16px; --tap: 48px;
+  }
+}
+@media (min-width: 1024px) { /* Laptop */
+  :root {
+    --page-pad: 40px; --section-gap: 104px;
+    --fs-hero: 96px; --lh-hero: 90px;
+    --fs-display-l: 96px; --lh-display-l: 112px;
+    --fs-display-m: 60px; --lh-display-m: 68px;
+    --fs-h2: 40px; --lh-h2: 48px;
+    --fs-lead: 18px; --lh-lead: 28px;
+  }
+}
+@media (min-width: 1280px) { /* Desktop (1440 design) */
+  :root {
+    --page-pad: 80px; --section-gap: 108px;
+    --fs-hero: 119px; --lh-hero: 112px;
+    --fs-display-l: 108px; --lh-display-l: 130px;
+    --fs-display-m: 72px; --lh-display-m: 88px;
+    --fs-title: 24px; --lh-title: 28px;
+    --fs-mono: 14px;
+  }
+}
+
+/* Base */
+body { background: var(--color-bg); color: var(--color-text-body); font: 400 var(--fs-body)/var(--lh-body) var(--font-ui); }
+.eitri-hero { font: 800 var(--fs-hero)/var(--lh-hero) var(--font-ui); letter-spacing: -0.03em; text-transform: uppercase; color: var(--color-text); }
+.eitri-display { font: 400 var(--fs-display-l)/var(--lh-display-l) var(--font-display); text-transform: uppercase; color: var(--color-text); }
+.eitri-h2 { font: 800 var(--fs-h2)/var(--lh-h2) var(--font-ui); text-transform: uppercase; color: var(--color-text); }
+.eitri-label { font: 400 var(--fs-mono)/1.4 var(--font-mono); text-transform: uppercase; color: var(--color-primary); }
+.eitri-card { background: var(--color-surface); border-radius: var(--radius); }
+.eitri-btn { min-height: var(--tap); padding: 0 24px; border: 0; border-radius: var(--radius); font: 700 var(--fs-button)/1 var(--font-ui); display: inline-flex; align-items: center; justify-content: center; gap: 10px; transition: background var(--duration-hover) var(--ease); cursor: pointer; }
+.eitri-btn--primary { background: var(--color-primary); color: var(--color-text); }
+.eitri-btn--primary:hover { background: var(--color-primary-hover); }
+.eitri-btn--primary:active { background: var(--color-primary-pressed); }
+.eitri-btn--secondary { background: var(--eitri-ash); color: var(--eitri-iron); }
+.eitri-btn--secondary:hover { background: var(--eitri-silver); }
+.eitri-btn--secondary:active { background: var(--eitri-steel); }
+.eitri-btn--outline { background: transparent; color: var(--eitri-silver); box-shadow: inset 0 0 0 1px var(--eitri-steel); }
+.eitri-btn--outline:hover { background: var(--eitri-graphite-01); box-shadow: inset 0 0 0 1px var(--eitri-forge-red); }
+.eitri-btn--outline:active { background: var(--eitri-graphite-00); }
+.eitri-btn:disabled { background: var(--eitri-iron); color: var(--eitri-steel); cursor: not-allowed; }
